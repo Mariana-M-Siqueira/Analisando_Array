@@ -1,5 +1,6 @@
 :root{
     --cor-background: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    --modal-background: #f9aca3;
     --branco: #ffffff;
     --cor-input: #f99185;
     --cor-btn: #b12a3a;
@@ -51,6 +52,10 @@ body{
     height: 25px;
 }
 
+.principal__container input:focus, .principal__container input:hover{
+    outline: 2px var(--cor-btn-escuro) solid;
+}
+
 .container-texto{
     font-size: 18px;
     margin-bottom: 16px;
@@ -82,6 +87,7 @@ button[type="submit"]{
 button[type="submit"]:hover, button[type="submit"]:focus{
     background-color: var(--cor-btn-escuro);
     font-size: 16px;
+    outline: none;
 }
 
 #btn-adicionar{
@@ -97,6 +103,42 @@ button[type="submit"]:hover, button[type="submit"]:focus{
     margin-bottom: 16px;
 }
 
+.modal{
+    border: none;
+    border-radius: 8px;
+    background-color: var(--modal-background);
+    width: 280px;
+    height: 150px;
+    padding: 20px;
+}
+
+.modal p{
+    position: relative;
+    top: 40%;
+    text-align: center;
+}
+
+.modal button{ 
+    position: relative;
+    left: 70%;
+    top: 65%;
+    height: 35px;
+    width: 30%;
+    font-size: 16px;
+    background-color: var(--cor-btn);
+    border: none;
+    border-radius: 2px;
+    color: var(--branco);
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: 500ms;
+}
+
+.modal button:hover, .modal button:focus{
+    outline: none;
+    background-color: var(--cor-btn-escuro);
+}
+
 .rodape{
     margin-top: 48px;
 }
@@ -109,4 +151,5 @@ button[type="submit"]:hover, button[type="submit"]:focus{
 
 .rodape__credito strong:hover, .rodape__credito strong:focus{
     font-size: 18px;
+    outline: none;
 }

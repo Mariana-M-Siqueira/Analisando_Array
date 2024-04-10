@@ -21,7 +21,7 @@ btnAdicionar.onclick = () => {
         areaAnalise.innerHTML = '';
     }
     else {
-        window.alert("Valor inválido ou já inserido!");
+        document.getElementById('modalBtnAdicionar').showModal();
     }
 
     nuns.value = '';
@@ -30,7 +30,7 @@ btnAdicionar.onclick = () => {
 
 btnFinalizar.onclick = () => {
     if (nunsLista.length == 0) {
-        alert("Insira pelo menos um valor na lista.")
+        document.getElementById('modalBtnFinalizar').showModal();
     } else {
 
         if (nunsLista.length == 1) {
@@ -52,6 +52,16 @@ btnFinalizar.onclick = () => {
         <p>O menor valor informado foi ${menor}.</p><br>
         <p>O maior valor informado foi ${maior}.</p><br>
         <p>A soma de todos os valores é igual a ${soma}.</p><br>
-        <p>E a média equivale a ${media}.</p>`;
+        <p>E a média equivale a ${media.toFixed(2)}.</p>`;
     }
 }
+
+document.getElementById('btnModalAdicionar').addEventListener('click', () => {
+    document.getElementById('modalBtnAdicionar').close();
+    nuns.focus();
+})
+
+document.getElementById('btnModalFinalizar').addEventListener('click', () => {
+    document.getElementById('modalBtnFinalizar').close();
+    nuns.focus();
+})
