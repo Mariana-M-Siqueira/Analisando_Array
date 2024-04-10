@@ -1,0 +1,112 @@
+:root{
+    --cor-background: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%);
+    --branco: #ffffff;
+    --cor-input: #f99185;
+    --cor-btn: #b12a3a;
+    --cor-btn-escuro: #951e2c;
+    --fonte: 'Helvetica';
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: var(--cor-background);
+    font-family: var(--fonte);
+}
+
+.cabecalho{
+    margin-bottom: 32px;
+}
+
+.cabecalho__titulo{
+    margin-bottom: 32px;
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+.principal{
+    padding: 2em 1.5em;
+    width: 350px;
+    border-radius: 8px;
+    background-color: var(--branco);
+}
+
+.principal__container{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.principal__container input{
+    padding-left: 10px;
+    width: 60%;
+    background-color: var(--cor-input);
+    border: none;
+    font-size: 16px;
+    border-radius: 2px;
+    height: 25px;
+}
+
+.container-texto{
+    font-size: 18px;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+.container-adicionados{
+    margin-bottom: 16px;
+    font-weight: 600;
+    font-size: 18px;
+    display: none;
+}
+
+.numero-adicionado{
+    margin-top: 16px;
+}
+
+button[type="submit"]{
+    background-color: var(--cor-btn);
+    border: none;
+    color: var(--branco);
+    letter-spacing: 1px;
+    font-size: 14px;
+    border-radius: 2px;
+    height: 25px;
+    transition: 500ms;
+}
+
+button[type="submit"]:hover, button[type="submit"]:focus{
+    background-color: var(--cor-btn-escuro);
+    font-size: 16px;
+}
+
+#btn-adicionar{
+    align-self: end;
+    width: 30%;
+    height: 30px;
+    position: absolute;
+    top: 31px;
+}
+
+#btn-finalizar{
+    height: 30px;
+    margin-bottom: 16px;
+}
+
+.rodape{
+    margin-top: 48px;
+}
+
+.rodape__credito strong{
+    cursor: pointer;
+    font-weight: 600;
+    transition: 500ms;
+}
+
+.rodape__credito strong:hover, .rodape__credito strong:focus{
+    font-size: 18px;
+}
