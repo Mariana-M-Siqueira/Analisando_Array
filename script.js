@@ -5,11 +5,7 @@ let areaAnalise = document.getElementById('container-resultado');
 let nunsLista = [];
 
 function inLista(n, l) {
-    if (l.indexOf(n) == -1) {
-        return true;
-    } else {
-        return false;
-    }
+    return l.indexOf(n) == -1;
 }
 
 btnAdicionar.onclick = () => {
